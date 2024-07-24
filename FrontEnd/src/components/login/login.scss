@@ -1,0 +1,46 @@
+.bg-dark {
+    .sign-in-content {
+        box-sizing: border-box;
+        background-color: white;
+        width: 300px;
+        margin: auto;
+        margin-top: 48px;
+        padding: 2rem;
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .input-wrapper label {
+            font-weight: bold;
+        }
+
+        .input-remember {
+            display: flex;
+        }
+
+        .input-remember label {
+            margin-left: 0.25rem;
+        }
+
+        .sign-in-button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            border-color: rgba(0, 188, 119, 1);
+            background-color: rgba(0, 188, 119, 1);
+            color: rgba(204, 204, 204, 1);
+        }
+
+        .input-wrapper input {
+            padding: 5px;
+            font-size: 1.2rem;
+        }
+    }
+}
