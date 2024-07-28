@@ -64,8 +64,8 @@ const Boutique = () => {
         layouts={layouts}
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
         cols={{ lg: 3, md: 3, sm: 2, xs: 1, xxs: 1 }}
-        rowHeight={620} /* Ajustez cette valeur selon vos besoins */
-        margin={[10, 10]} /* Espace horizontal et vertical entre les éléments */
+        rowHeight={620}
+        margin={[10, 10]}
         isResizable={false}
         isDraggable={false}
       >
