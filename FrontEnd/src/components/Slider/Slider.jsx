@@ -1,7 +1,7 @@
 import { useState } from "react";
-import leftChevron from "../../assets/left-arrow.svg";
-import rightChevron from "../../assets/right-arrow.svg";
-import sliderData from "../../data/sliderData";
+import leftChevron from "/left-arrow.svg";
+import rightChevron from "/right-arrow.svg";
+import sliderData from "../../assets/data/sliderData";
 
 const Slider = () => {
   const toggleImage = (direction) => {
@@ -27,7 +27,7 @@ const Slider = () => {
         </p>
 
         <img
-          src={`/img/img-${sliderIndex}.webp`}
+          src={`/img/img-slider/img-${sliderIndex}.webp`}
           alt="images1"
           className="slider-img"
         />

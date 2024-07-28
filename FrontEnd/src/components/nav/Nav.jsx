@@ -20,7 +20,7 @@ const Nav = () => {
         </div>
         <div className={`nav_link ${isNavVisible ? "" : "hide"}`}>
           <NavLink to="/">Acceuil</NavLink>
-          <NavLink to="Fiches">Fiches techniques</NavLink>
+          <NavLink to="Blog">Blog</NavLink>
           <NavLink to="Boutique">Boutique</NavLink>
           <NavLink to="Signin">Zone Membres</NavLink>
         </div>

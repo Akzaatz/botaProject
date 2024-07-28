@@ -1,0 +1,22 @@
+.boutique {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+
+
+        h1 {
+            color: #ffff;
+            font-size: 1.5rem;
+        }
+
+        .shopping-cart {
+            padding: 5px;
+        }
+
+        img {
+            width: 30px;
+
+        }
+    }
+}

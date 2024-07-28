@@ -7,4 +7,8 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0, // Adjust this if necessary
   },
+  server: {
+    open: "/index.html",
+    browser: "brave",
+  },
 });

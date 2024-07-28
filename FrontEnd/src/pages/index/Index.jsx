@@ -1,19 +1,18 @@
 import React from "react";
+import background from "/img/img-site/tresse_01.webp";
 
 const Index = () => {
+  const pageStyle = {
+    backgroundImage: `url(${background})`,
+    height: "100vh",
+    fontSize: "50px",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  };
   return (
-    <div>
+    <div className="index" style={pageStyle}>
       <h1>Page D'acceuil</h1>
-      <div>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
-          nisi, nulla sit magni non voluptates rem modi. Temporibus earum
-          excepturi et quaerat illum nobis nesciunt, dolorum atque voluptatibus
-          consectetur corporis enim accusamus ab? Recusandae totam saepe minus
-          debitis temporibus perferendis consectetur tempora dignissimos. Minus
-          iste velit sequi quisquam nisi enim.
-        </p>
-      </div>
+      <img src="/img-site/tresse_01.webp" alt="" />
     </div>
   );
 };

@@ -1,13 +1,13 @@
 import React from "react";
 import Slider from "../../components/Slider/Slider";
 
-const Fiches = () => {
+const Blog = () => {
   return (
     <div>
-      <h1>Fiches techniques</h1>
+      <h1>Blog</h1>
       <Slider />
     </div>
   );
 };
 
-export default Fiches;
+export default Blog;
