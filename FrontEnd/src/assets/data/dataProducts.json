@@ -1,203 +1,205 @@
 {
-  "plantsLegumes": [
-    {
-      "ref": "ple_1",
-      "category": 0,
-      "name": "plant de courgette",
-      "price": 1,
-      "unit": "pièce",
-      "image": "plant-courgette.webp",
-      "id": 1
-    },
-    {
-      "ref": "ple_2",
-      "category": 0,
-      "name": "plant-bette",
-      "price": 1,
-      "unit": "pièce",
-      "image": "plant-bette.webp",
-      "id": 2
-    },
-    {
-      "ref": "ple_3",
-      "category": 0,
-      "name": "plants-artichauts",
-      "price": 2.5,
-      "unit": "pièce",
-      "image": "plant-artichauts.webp",
-      "id": 3
-    },
-    {
-      "ref": "ple_4",
-      "category": 0,
-      "name": "Plant de piment fort ou très fort",
-      "price": 1,
-      "unit": "lot",
-      "image": "plant-piment.webp",
-      "id": 4
-    },
-    {
-      "ref": "ple_4",
-      "category": 0,
-      "name": "Lot de plants de concombres",
-      "price": 6,
-      "unit": "lot",
-      "image": "plants-concombres.webp",
-      "id": 5
-    }
-  ],
-  "plantsFruits": [
-    {
-      "ref": "pfr_1",
-      "category": 1,
-      "name": "plant-physalis-peruviana",
-      "price": 2,
-      "unit": "pièce",
-      "image": "plant-physalis-peruviana.webp",
-      "id": 6
-    },
-    {
-      "ref": "pfr_2",
-      "category": 1,
-      "name": "Plant-fraisier-des-bois",
-      "price": 1,
-      "unit": "pièce",
-      "image": "Plant-fraisier-des-bois.webp",
-      "id": 7
-    },
-    {
-      "ref": "pfr_2",
-      "category": 1,
-      "name": "Plant de curcuma",
-      "price": 2.5,
-      "unit": "pièce",
-      "image": "plant-curcuma.webp",
-      "id": 8
-    },
-    {
-      "ref": "pfr_2",
-      "category": 1,
-      "name": "Plant de gingembre",
-      "price": 2.5,
-      "unit": "pièce",
-      "image": "plant-gigembre.webp",
-      "id": 9
-    }
-  ],
-  "plantsFleurs": [
-    {
-      "ref": "pfl_1",
-      "category": 2,
-      "name": "plant d'agapanthe blanche",
-      "price": 2,
-      "unit": "pièce",
-      "image": "plant-agapanthe-blanche.webp",
-      "id": 10
-    },
-    {
-      "ref": "pfl_2",
-      "category": 2,
-      "name": "Plant de pontédérie",
-      "price": 2.5,
-      "unit": "pièce",
-      "image": "plant-pontederie.webp",
-      "id": 11
-    },
-    {
-      "ref": "pfl_2",
-      "category": 2,
-      "name": "Plant de roseau des étangs",
-      "price": 2.5,
-      "unit": "pièce",
-      "image": "plant-roseau-etangs.webp",
-      "id": 12
-    },
-    {
-      "ref": "pfl_2",
-      "category": 2,
-      "name": "Plant d'Hortensia",
-      "price": 2.5,
-      "unit": "pièce",
-      "image": "plant-hortensia.webp",
-      "id": 13
-    }
-  ],
-  "grainesLegumes": [
-    {
-      "ref": "gle_1",
-      "category": 4,
-      "name": "graines de plantes aromatiques",
-      "price": 5,
-      "unit": "lot",
-      "image": "graines-de-plantes-aromatiques.webp",
-      "id": 14
-    },
-    {
-      "ref": "gle_2",
-      "category": 4,
-      "name": "Graines de tomates anciennes",
-      "price": 5,
-      "unit": "lot",
-      "image": "graines-tomates-anciennes.webp",
-      "id": 15
-    },
-    {
-      "ref": "gle_3",
-      "category": 4,
-      "name": "Graines de courgette Slaouï",
-      "price": 1,
-      "unit": "lot",
-      "image": "graines-courgette-slaouï.webp",
-      "id": 16
-    },
-    {
-      "ref": "gle_3",
-      "category": 5,
-      "name": "Graines de courge Luffa",
-      "price": 5,
-      "unit": "lot",
-      "image": "graines-courges-luffa.webp",
-      "id": 17
-    }
-  ],
-  "grainesFruits": [
-    {
-      "ref": "gfr_1",
-      "category": 4,
-      "name": "Graines de pastèque Rouges",
-      "price": 1,
-      "unit": "lot",
-      "image": "graines-pasteque-rouges.webp",
-      "id": 18
-    },
-    {
-      "ref": "gfr_2",
-      "category": 4,
-      "name": "graines de piments forts",
-      "price": 1,
-      "unit": "lot",
-      "image": "graines-piments-forts.webp",
-      "id": 19
-    }
-  ],
-  "grainesFleurs": [
-    {
-      "ref": "gfl_1",
-      "category": 5,
-      "name": "Graines de Glycine mauve",
-      "price": 1,
-      "unit": "pièce",
-      "image": "graines--glycine-mauve.webp",
-      "id": 21
-    },
-    {
-      "ref": "gfl_2",
-      "category": 5,
-      "name": "23 sachets de graines de fleurs",
-      "price": 20,
-      "unit": "lot",
-      "image": "sachets-graines-fleurs.webp",
-      "id": 21
-    }
-  ]
+  "products": {
+    "plantsLegumes": [
+      {
+        "ref": "ple_1",
+        "category": 0,
+        "name": "plant de courgette",
+        "price": 1,
+        "unit": "pièce",
+        "image": "plant-courgette.webp",
+        "id": 1
+      },
+      {
+        "ref": "ple_2",
+        "category": 0,
+        "name": "plant-bette",
+        "price": 1,
+        "unit": "pièce",
+        "image": "plant-bette.webp",
+        "id": 2
+      },
+      {
+        "ref": "ple_3",
+        "category": 0,
+        "name": "plants-artichauts",
+        "price": 2.5,
+        "unit": "pièce",
+        "image": "plant-artichauts.webp",
+        "id": 3
+      },
+      {
+        "ref": "ple_4",
+        "category": 0,
+        "name": "Plant de piment fort ou très fort",
+        "price": 1,
+        "unit": "lot",
+        "image": "plant-piment.webp",
+        "id": 4
+      },
+      {
+        "ref": "ple_4",
+        "category": 0,
+        "name": "Lot de plants de concombres",
+        "price": 6,
+        "unit": "lot",
+        "image": "plants-concombres.webp",
+        "id": 5
+      }
+    ],
+    "plantsFruits": [
+      {
+        "ref": "pfr_1",
+        "category": 1,
+        "name": "plant-physalis-peruviana",
+        "price": 2,
+        "unit": "pièce",
+        "image": "plant-physalis-peruviana.webp",
+        "id": 6
+      },
+      {
+        "ref": "pfr_2",
+        "category": 1,
+        "name": "Plant-fraisier-des-bois",
+        "price": 1,
+        "unit": "pièce",
+        "image": "Plant-fraisier-des-bois.webp",
+        "id": 7
+      },
+      {
+        "ref": "pfr_2",
+        "category": 1,
+        "name": "Plant de curcuma",
+        "price": 2.5,
+        "unit": "pièce",
+        "image": "plant-curcuma.webp",
+        "id": 8
+      },
+      {
+        "ref": "pfr_2",
+        "category": 1,
+        "name": "Plant de gingembre",
+        "price": 2.5,
+        "unit": "pièce",
+        "image": "plant-gigembre.webp",
+        "id": 9
+      }
+    ],
+    "plantsFleurs": [
+      {
+        "ref": "pfl_1",
+        "category": 2,
+        "name": "plant d'agapanthe blanche",
+        "price": 2,
+        "unit": "pièce",
+        "image": "plant-agapanthe-blanche.webp",
+        "id": 10
+      },
+      {
+        "ref": "pfl_2",
+        "category": 2,
+        "name": "Plant de pontédérie",
+        "price": 2.5,
+        "unit": "pièce",
+        "image": "plant-pontederie.webp",
+        "id": 11
+      },
+      {
+        "ref": "pfl_2",
+        "category": 2,
+        "name": "Plant de roseau des étangs",
+        "price": 2.5,
+        "unit": "pièce",
+        "image": "plant-roseau-etangs.webp",
+        "id": 12
+      },
+      {
+        "ref": "pfl_2",
+        "category": 2,
+        "name": "Plant d'Hortensia",
+        "price": 2.5,
+        "unit": "pièce",
+        "image": "plant-hortensia.webp",
+        "id": 13
+      }
+    ],
+    "grainesLegumes": [
+      {
+        "ref": "gle_1",
+        "category": 4,
+        "name": "graines de plantes aromatiques",
+        "price": 5,
+        "unit": "lot",
+        "image": "graines-de-plantes-aromatiques.webp",
+        "id": 14
+      },
+      {
+        "ref": "gle_2",
+        "category": 4,
+        "name": "Graines de tomates anciennes",
+        "price": 5,
+        "unit": "lot",
+        "image": "graines-tomates-anciennes.webp",
+        "id": 15
+      },
+      {
+        "ref": "gle_3",
+        "category": 4,
+        "name": "Graines de courgette Slaouï",
+        "price": 1,
+        "unit": "lot",
+        "image": "graines-courgette-slaouï.webp",
+        "id": 16
+      },
+      {
+        "ref": "gle_3",
+        "category": 5,
+        "name": "Graines de courge Luffa",
+        "price": 5,
+        "unit": "lot",
+        "image": "graines-courges-luffa.webp",
+        "id": 17
+      }
+    ],
+    "grainesFruits": [
+      {
+        "ref": "gfr_1",
+        "category": 4,
+        "name": "Graines de pastèque Rouges",
+        "price": 1,
+        "unit": "lot",
+        "image": "graines-pasteque-rouges.webp",
+        "id": 18
+      },
+      {
+        "ref": "gfr_2",
+        "category": 4,
+        "name": "graines de piments forts",
+        "price": 1,
+        "unit": "lot",
+        "image": "graines-piments-forts.webp",
+        "id": 19
+      }
+    ],
+    "grainesFleurs": [
+      {
+        "ref": "gfl_1",
+        "category": 5,
+        "name": "Graines de Glycine mauve",
+        "price": 1,
+        "unit": "pièce",
+        "image": "graines--glycine-mauve.webp",
+        "id": 21
+      },
+      {
+        "ref": "gfl_2",
+        "category": 5,
+        "name": "23 sachets de graines de fleurs",
+        "price": 20,
+        "unit": "lot",
+        "image": "sachets-graines-fleurs.webp",
+        "id": 21
+      }
+    ]
+  }
 }

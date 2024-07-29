@@ -3,18 +3,19 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import Card from "../../components/card/Card";
 import boutikItems from "../../assets/data/dataProducts.json";
+import ProductsList from "../../features/ProductsList";
 import shoppingCart from "/shopping-cart.svg";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Boutique = () => {
   const [filteredProducts, setFilteredProducts] = useState([
-    ...boutikItems.plantsLegumes,
-    ...boutikItems.plantsFruits,
-    ...boutikItems.plantsFleurs,
-    ...boutikItems.grainesLegumes,
-    ...boutikItems.grainesFruits,
-    ...boutikItems.grainesFleurs,
+    ...boutikItems.products.plantsLegumes,
+    ...boutikItems.products.plantsFruits,
+    ...boutikItems.products.plantsFleurs,
+    ...boutikItems.products.grainesLegumes,
+    ...boutikItems.products.grainesFruits,
+    ...boutikItems.products.grainesFleurs,
   ]);
 
   const generateLayouts = (products) => {
@@ -60,6 +61,7 @@ const Boutique = () => {
           </button>
         </div>
       </div>
+      <ProductsList />
       <ResponsiveGridLayout
         layouts={layouts}
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
