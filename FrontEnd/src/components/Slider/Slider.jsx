@@ -1,7 +1,7 @@
 import { useState } from "react";
 import leftChevron from "/left-arrow.svg";
 import rightChevron from "/right-arrow.svg";
-import sliderData from "../../assets/data/sliderData";
+import sliderData from "../../../public/assets/data/sliderData";
 
 const Slider = () => {
   const toggleImage = (direction) => {

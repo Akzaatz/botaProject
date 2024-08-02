@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import Card from "../../components/card/Card";
-import boutikItems from "../../assets/data/dataProducts.json";
+import boutikItems from "/public/assets/data/dataProducts.json";
 import ProductsList from "../../features/ProductsList";
 import shoppingCart from "/shopping-cart.svg";
 

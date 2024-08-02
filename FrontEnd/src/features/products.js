@@ -1,26 +1,44 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  items: undefined,
+  items: [],
+  status: "idle",
+  error: null,
 };
 
-export const products = createSlice({
+const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    addProducts: (state, action) => {
+    setProducts(state, action) {
       state.items = action.payload;
+      state.status = "succeeded";
+    },
+    setStatus(state, action) {
+      state.status = action.payload;
+    },
+    setError(state, action) {
+      state.error = action.payload;
+      state.status = "failed";
     },
   },
 });
 
-export function getProductList(action) {
-  return function (dispatch, getState) {
-    fetch("../assets/data/dataProducts.json")
-      .then((response) => response.json())
-      .then((data) => dispatch(addProducts(data.products)));
-  };
-}
+export const { setProducts, setStatus, setError } = productsSlice.actions;
 
-export const { addProducts } = products.actions;
-export default products.reducer;
+export const fetchProducts = () => async (dispatch) => {
+  try {
+    dispatch(setStatus("loading"));
+    const response = await fetch("/assets/data/dataProducts.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    const flattenedProducts = Object.values(data.products).flat();
+    dispatch(setProducts(flattenedProducts));
+  } catch (error) {
+    dispatch(setError(error.toString()));
+  }
+};
+
+export default productsSlice.reducer;

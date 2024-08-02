@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card = ({ product }) => {
-  // Vérification pour éviter les erreurs si product est undefined
   if (!product) {
     return <div>Produit non trouvé</div>;
   }

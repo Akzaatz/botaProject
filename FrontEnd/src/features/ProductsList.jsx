@@ -1,14 +1,40 @@
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getProductList } from "./products";
+import { fetchProducts } from "./products";
 
-export default function ProductsList() {
-  const products = useSelector((state) => state.products.items);
+const ProductList = () => {
   const dispatch = useDispatch();
+  const {
+    items: products,
+    status,
+    error,
+  } = useSelector((state) => state.products);
 
-  if (!products) {
-    dispatch(getProductList());
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchProducts());
+    }
+  }, [status, dispatch]);
+
+  useEffect(() => {
+    console.log("Products:", products);
+  }, [products]);
+
+  if (status === "loading") {
+    return <p>Loading products...</p>;
   }
 
-  console.log(products);
-  return <div>ProductsList</div>;
-}
+  if (status === "failed") {
+    return <p>Error loading products: {error}</p>;
+  }
+
+  return (
+    <div className="product-list">
+      {products.map((product, index) => (
+        <div key={index}>{product.name}</div>
+      ))}
+    </div>
+  );
+};
+
+export default ProductList;
