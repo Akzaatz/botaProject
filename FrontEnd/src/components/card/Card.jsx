@@ -1,11 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { togglePicked } from "../../features/productsSlice";
+import "./card.scss";
 
 const Card = ({ product }) => {
+  const dispatch = useDispatch();
+
   if (!product) {
     return <div>Produit non trouvé</div>;
   }
 
-  const { ref, category, name, price, unit, image } = product;
+  const { ref, category, name, price, unit, image, picked } = product;
 
   return (
     <div className="card">
@@ -23,7 +28,12 @@ const Card = ({ product }) => {
         </ul>
       </div>
       <div className="card-footer">
-        <button>Ajouter au panier</button>
+        <button
+          className={picked ? "picked" : ""}
+          onClick={() => dispatch(togglePicked(product.id))}
+        >
+          {picked ? "Article déjà ajouté ✅" : "Ajoutez au panier"}
+        </button>
       </div>
     </div>
   );

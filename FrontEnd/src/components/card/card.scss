@@ -5,13 +5,9 @@
     margin-bottom: 20px;
     max-width: 300px;
 
-
-
     .card-header {
         padding: 10px;
         background-color: red;
-
-
 
         h2 {
             margin-bottom: 20px;
@@ -36,15 +32,18 @@
         height: 80px;
 
         button {
-            background-color: #007bff;
             color: #fff;
             border: none;
             padding: 8px 16px;
             border-radius: 4px;
             cursor: pointer;
 
-            &:hover {
-                background-color: #0056b3;
+            &.picked {
+                background-color: green;
+            }
+
+            &:not(.picked) {
+                background-color: blue;
             }
         }
     }

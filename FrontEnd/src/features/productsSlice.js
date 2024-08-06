@@ -21,10 +21,17 @@ const productsSlice = createSlice({
       state.error = action.payload;
       state.status = "failed";
     },
+    togglePicked(state, action) {
+      const product = state.items.find((item) => item.id === action.payload);
+      if (product) {
+        product.picked = !product.picked;
+      }
+    },
   },
 });
 
-export const { setProducts, setStatus, setError } = productsSlice.actions;
+export const { setProducts, setStatus, setError, togglePicked } =
+  productsSlice.actions;
 
 export const fetchProducts = () => async (dispatch) => {
   try {
@@ -34,8 +41,16 @@ export const fetchProducts = () => async (dispatch) => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    const flattenedProducts = Object.values(data.products).flat();
-    dispatch(setProducts(flattenedProducts));
+    if (data.products && typeof data.products === "object") {
+      const allProducts = [
+        ...data.products.plantsLegumes,
+        ...data.products.plantsFruits,
+        ...data.products.plantsFleurs,
+      ];
+      dispatch(setProducts(allProducts));
+    } else {
+      throw new Error("Data format is incorrect");
+    }
   } catch (error) {
     dispatch(setError(error.toString()));
   }

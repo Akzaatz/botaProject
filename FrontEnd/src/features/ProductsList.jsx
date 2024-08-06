@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from "./products";
+import { fetchProducts } from "./productsSlice";
 
 const ProductList = () => {
   const dispatch = useDispatch();
-  const {
-    items: products,
-    status,
-    error,
-  } = useSelector((state) => state.products);
+  const products = useSelector((state) => state.products.items);
+  const status = useSelector((state) => state.products.status);
+  const error = useSelector((state) => state.products.error);
 
   useEffect(() => {
     if (status === "idle") {
@@ -16,23 +14,25 @@ const ProductList = () => {
     }
   }, [status, dispatch]);
 
-  useEffect(() => {
-    console.log("Products:", products);
-  }, [products]);
-
   if (status === "loading") {
-    return <p>Loading products...</p>;
+    return <div>Loading...</div>;
   }
 
   if (status === "failed") {
-    return <p>Error loading products: {error}</p>;
+    return <div>Error: {error}</div>;
   }
 
   return (
-    <div className="product-list">
-      {products.map((product, index) => (
-        <div key={index}>{product.name}</div>
-      ))}
+    <div>
+      {products && Array.isArray(products) ? (
+        products.map((product) => (
+          <div key={product.id}>
+            <h2>{product.name}</h2>
+          </div>
+        ))
+      ) : (
+        <div>No products found.</div>
+      )}
     </div>
   );
 };
