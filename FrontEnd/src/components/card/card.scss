@@ -36,14 +36,16 @@
             border: none;
             padding: 8px 16px;
             border-radius: 4px;
-            cursor: pointer;
+
 
             &.picked {
                 background-color: green;
+                cursor: default;
             }
 
             &:not(.picked) {
                 background-color: blue;
+                cursor: pointer;
             }
         }
     }

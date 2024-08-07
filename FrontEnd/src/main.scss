@@ -1,8 +1,8 @@
-@use './utils/settings.scss';
-@use './components/header/header.scss';
-@use './pages/index/index.scss';
-@use './components/nav/nav.scss';
-@use './components/login/login.scss';
-@use './components/Slider/slider.scss';
+// main.scss
+
+@use '../src/components/nav/nav.module.scss';
+@use '../src/pages/index/index.scss';
+@use '../src/components/card/card.scss';
+@use '../src/components/login/login.scss';
+@use '../src/components/Slider/slider.scss';
 @use '../src/pages/boutique/boutique.scss';
-@use './components/card/card.scss'

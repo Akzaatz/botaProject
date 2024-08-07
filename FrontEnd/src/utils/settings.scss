@@ -1,8 +1,12 @@
-// @mixin title {
-//     font-family: $font1;
-//     letter-spacing: 2px;
-//     text-transform: uppercase;
-// }
+//settings.scss: 
+
+@font-face {
+    font-family: "Roboto";
+    src: url("#{$VITE_BASE_URL}fonts/Roboto/Roboto-Regular.ttf") format("opentype");
+}
+
+
+
 $black1: rgb(17, 17, 17);
 $white1: rgb(243, 243, 243);
 $grey1: rgb(209, 209, 209);
@@ -13,27 +17,21 @@ $prim2: rgb(35, 106, 123);
 
 
 
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
-
 * {
-    font-family: "Montserrat",
+    font-family: $font1,
         sans-serif;
     font-size: 1rem;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    ::before,
-    ::after {
-        box-sizing: border-box;
+    *::before,
+    *::after {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: $white;
     }
 }
 

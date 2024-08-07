@@ -1,0 +1,247 @@
+ @use '../../utils/variables.scss';
+
+
+ .navbar {
+     display: flex;
+     font-family: variables.$font1;
+     flex-wrap: wrap;
+     font-weight: 100;
+     justify-content: space-between;
+     align-items: center;
+     position: fixed;
+     width: 100%;
+     top: -1px;
+     min-height: 55px;
+     background: rgb(42, 165, 223);
+     color: white;
+     padding: 1rem;
+     z-index: 5;
+
+     &.showNav .navbar_links {
+         display: flex;
+     }
+
+     .navbar_logo {
+         font-family: variables.$font1;
+         font-size: 2.9rem;
+         font-weight: 900;
+     }
+
+     .navbar_links {
+         display: flex;
+         color: white;
+     }
+
+     .navbar_item {
+         color: white;
+         display: flex;
+         font-size: 1.2rem;
+         margin-left: 15px;
+     }
+
+     .navbar_link {
+         padding: 0 0.3rem;
+         color: inherit;
+         font-size: 1.5rem;
+     }
+
+     .navbar_burger {
+         margin-top: 20px;
+         width: 40px;
+         height: 40px;
+         border: none;
+         background: transparent;
+         display: none;
+     }
+
+     .burger_bar {
+         display: block;
+         width: 40px;
+         height: 2px;
+         background: white;
+     }
+
+     @media screen and (max-width: 768px) {
+         .navbar_links {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             position: fixed;
+             right: -100vw;
+             width: 200px;
+             bottom: 0;
+             height: 100vh;
+             padding: 2rem;
+             background: pink;
+             opacity: 0.8;
+             transition: right 0.3s ease;
+         }
+
+         &.showNav .navbar_links {
+             right: 0;
+             visibility: visible;
+         }
+
+         .navbar_logo {
+             font-size: 2rem;
+             font-weight: 900;
+         }
+
+         .navbar_link {
+             display: block;
+             padding: 1.5rem;
+             font-size: 5vw;
+             color: purple;
+         }
+
+         .navbar_burger {
+             display: block;
+             position: fixed;
+             top: 1rem;
+             right: 1rem;
+         }
+
+         .navbar_burger:hover {
+             cursor: pointer;
+         }
+
+         .burger_bar,
+         .burger_bar::before,
+         .burger_bar::after {
+             display: block;
+             width: 40px;
+             height: 2px;
+             position: relative;
+             border-radius: 3px;
+             background: white;
+             transition: all 0.5s ease-in-out;
+         }
+
+         .burger_bar::before,
+         .burger_bar::after {
+             content: "";
+             position: absolute;
+             left: 0;
+         }
+
+         .burger_bar::before {
+             transform: translateY(-12px);
+         }
+
+         .burger_bar::after {
+             transform: translateY(12px);
+         }
+
+         &.showNav .burger_bar {
+             background: transparent;
+             width: 0;
+         }
+
+         &.showNav .burger_bar::before {
+             transform: rotate(45deg);
+         }
+
+         &.showNav .burger_bar::after {
+             transform: rotate(-45deg);
+         }
+     }
+ }
+
+ .navbar_item {
+     &.slideInDown-1 {
+         animation: variables.$slideInDownDelay-1;
+     }
+
+     &.slideInDown-2 {
+         animation: variables.$slideInDownDelay-2;
+     }
+
+     &.slideInDown-3 {
+         animation: variables.$slideInDownDelay-3;
+     }
+
+     &.slideInDown-4 {
+         animation: variables.$slideInDownDelay-4;
+     }
+ }
+
+
+ //  .nav {
+ //     display: flex;
+ //     justify-content: space-between;
+ //     align-items: center;
+ //     padding-top: 20px;
+ //     background: rgb(66, 166, 190);
+ //     color: white;
+
+ //     h1 {
+ //         padding-left: 20px;
+
+ //     }
+
+ //     .hamburger {
+ //         padding-right: 20px;
+ //         cursor: pointer;
+ //         font-size: 1.5rem;
+
+ //     }
+
+ //     .hamburger .stick {
+ //         display: block;
+ //         width: 40px;
+ //         height: 3px;
+ //         margin-bottom: 10px;
+ //         background: white
+ //     }
+
+ //     .nav_link {
+
+ //         position: fixed;
+ //         width: 40%;
+ //         top: 30px;
+ //         right: 48px;
+
+
+
+
+ //     }
+
+ //     .nav_link a {
+ //         display: block;
+ //         text-align: center;
+ //     }
+
+ //     & a:hover {
+ //         background: rgb(66, 166, 190);
+ //     }
+
+ //     .hide {
+ //         display: none;
+ //     }
+
+ //     @media screen and (min-width: 768px) {
+ //         .hamburger {
+ //             display: none;
+ //         }
+
+ //         .nav_link {
+ //             position: static;
+ //             width: auto;
+ //             top: 0;
+ //             left: 0;
+ //             background: none;
+ //             display: flex;
+ //             justify-content: space-between;
+ //             margin: 0 20px;
+ //             padding: 0;
+ //         }
+
+ //         .nav_link a {
+ //             display: inline-block;
+ //             text-align: center;
+ //             padding: 20px 10px;
+ //         }
+
+ //     }
+ // }

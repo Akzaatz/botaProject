@@ -1,0 +1,25 @@
+//variables.scss
+
+// ========FONTS==========
+$font1: "Roboto", sans-serif;
+
+
+//  ========ANIMS==========
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+
+$slideInDown: slideInDown 0.5s ease-in-out;
+$slideInDownDelay-1: slideInDown 0.5s ease-in-out 0s;
+$slideInDownDelay-2: slideInDown 0.5s ease-in-out 0.1s;
+$slideInDownDelay-3: slideInDown 0.5s ease-in-out 0.2s;
+$slideInDownDelay-4: slideInDown 0.5s ease-in-out 0.3s;

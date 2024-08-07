@@ -1,10 +1,11 @@
+// cart.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cartItems: [],
 };
 
-export const cart = createSlice({
+export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
@@ -14,10 +15,32 @@ export const cart = createSlice({
   },
 });
 
-export function addOneToCart(action) {
-  return function (dispatch, getState) {
+export const addOneToCart = (productId) => {
+  return (dispatch, getState) => {
+    console.log("addOneToCart"); // Assurez-vous que ce log fonctionne
     const storeState = getState();
 
-    constisAlreadyPresent = storeState.producys.items.find;
+    const isAlreadyPresent = storeState.cart.cartItems.find(
+      (product) => product.id === productId
+    );
+
+    if (!isAlreadyPresent) {
+      const itemToAdd = storeState.products.items.find(
+        (product) => product.id === productId
+      );
+
+      if (itemToAdd) {
+        const newCartItem = {
+          ...itemToAdd,
+
+          quantity: 1,
+        };
+        console.log(newCartItem);
+        dispatch(createCartItem(newCartItem));
+      }
+    }
   };
-}
+};
+
+export const { createCartItem } = cartSlice.actions;
+export default cartSlice.reducer;
