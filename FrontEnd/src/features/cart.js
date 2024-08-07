@@ -17,7 +17,7 @@ export const cartSlice = createSlice({
 
 export const addOneToCart = (productId) => {
   return (dispatch, getState) => {
-    console.log("addOneToCart"); // Assurez-vous que ce log fonctionne
+    console.log("addOneToCart");
     const storeState = getState();
 
     const isAlreadyPresent = storeState.cart.cartItems.find(

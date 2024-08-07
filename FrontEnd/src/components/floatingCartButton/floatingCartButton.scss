@@ -1,0 +1,16 @@
+.floating-cart-button {
+
+
+
+    .cart-button {
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 110px;
+        right: 25px;
+        cursor: pointer;
+
+    }
+}

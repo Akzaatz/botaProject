@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import ProductsList from "../../features/ProductsList";
 import ResponsiveGridLayoutComponent from "../../components/ResponsiveGridLayout.jsx/ResponsiveGridLayout";
-import Cart from "../../components/cart/Cart";
+import FloatingCartButton from "../../components/floatingCartButton/FloatingCartButton";
 
 const Boutique = () => {
   const products = useSelector((state) => state.products.items);
@@ -10,8 +10,7 @@ const Boutique = () => {
   return (
     <div className="boutique">
       <div className="header">
-        <h1>Boutique</h1>
-        <Cart />
+        <FloatingCartButton />
       </div>
       <div className="product-list">
         <ProductsList products={products} />
