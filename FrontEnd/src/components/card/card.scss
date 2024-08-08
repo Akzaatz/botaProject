@@ -9,8 +9,14 @@
         padding: 10px;
         background-color: red;
 
-        h2 {
-            margin-bottom: 20px;
+        .card_header_name {
+
+            height: 70px;
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
         }
 
         img {
@@ -22,7 +28,7 @@
     .card-body {
         padding: 10px;
         background: green;
-        height: 150px;
+        height: au;
     }
 
     .card-footer {

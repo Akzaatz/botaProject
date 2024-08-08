@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { updateItemFromSelect, deleteFromCart } from "../../features/cart";
 import React from "react";
 import styles from "./cart.module.scss";
 
@@ -24,8 +25,15 @@ const Cart = ({ onClose }) => {
                 <div className="select-buttons">
                   <select
                     name="quantity"
-                    id=""
-                    // onChange={e=>dispatch()}</div>
+                    onChange={(e) =>
+                      dispatch(
+                        updateItemFromSelect({
+                          value: e.target.value,
+                          id: product.id,
+                        })
+                      )
+                    }
+                    value={product.quantity}
                   >
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -35,14 +43,35 @@ const Cart = ({ onClose }) => {
                     <option value="6">6</option>
                   </select>
                 </div>
-                <div className="delete_button">
-                  <button>Supprimer du panier</button>
+                <div>
+                  <button
+                    onClick={() => dispatch(deleteFromCart(product.id))}
+                    className="delete_button "
+                  >
+                    Supprimer du panier
+                  </button>
                 </div>
               </li>
             ))
           ) : (
             <li className="cart-2">Ajoutez des articles au panier</li>
           )}
+          <div className="cart_footer">
+            <div>
+              <p className="total">
+                Votre Total :
+                <span className="seum">
+                  {cart.cartItems
+                    .reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
+                    .toFixed(2)}{" "}
+                  €
+                </span>
+              </p>
+            </div>
+            <div className="commande">
+              <button>passez lacommande</button>
+            </div>
+          </div>
         </ul>
       </div>
     </div>

@@ -34,7 +34,7 @@
       {
         "ref": "ple_4",
         "category": 0,
-        "name": "Plant de piment fort ou très fort",
+        "name": "Plant de piment fort",
         "price": 1,
         "unit": "lot",
         "image": "plant-piment.webp",
@@ -44,7 +44,7 @@
       {
         "ref": "ple_4",
         "category": 0,
-        "name": "Lot de plants de concombres",
+        "name": "Plants de concombres",
         "price": 6,
         "unit": "lot",
         "image": "plants-concombres.webp",
@@ -56,7 +56,7 @@
       {
         "ref": "pfr_1",
         "category": 1,
-        "name": "plant-physalis-peruviana",
+        "name": "Plants-physalis-peruviana",
         "price": 2,
         "unit": "pièce",
         "image": "plant-physalis-peruviana.webp",
@@ -209,7 +209,7 @@
         "unit": "pièce",
         "image": "graines--glycine-mauve.webp",
         "picked": false,
-        "id": 21
+        "id": 20
       },
       {
         "ref": "gfl_2",

@@ -1,8 +1,7 @@
 .floating-cart-button {
-
-
-
     .cart-button {
+        background: purple;
+        color: white;
         z-index: 3;
         display: flex;
         justify-content: center;
@@ -12,5 +11,8 @@
         right: 25px;
         cursor: pointer;
 
+        span {
+            margin-left: 20px;
+        }
     }
 }

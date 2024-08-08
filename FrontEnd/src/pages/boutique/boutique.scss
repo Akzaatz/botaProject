@@ -1,23 +1,38 @@
 .boutique {
+    padding-top: 120px;
+
+
     .header {
-        padding-top: 120px;
+
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         margin: 20px;
 
 
+
         h1 {
-            color: #3e719b;
+            color: #ffffff;
             font-size: 1.5rem;
         }
 
-        .shopping-cart {
-            padding: 5px;
-        }
+        // .shopping-cart {
+        //     padding: 5px;
+        // }
 
         img {
             width: 30px;
 
+        }
+
+        select {
+            margin-top: 15px;
+            position: fixed;
+            top: 100px;
+            right: 215px;
+            height: 30px;
+            background: purple;
+            color: white;
+            z-index: 3;
         }
     }
 

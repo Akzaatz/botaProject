@@ -24,7 +24,9 @@ const Card = ({ product }) => {
   return (
     <div className="card">
       <div className="card-header">
-        <h2>{name}</h2>
+        <div className="card_header_name">
+          <h2>{name}</h2>
+        </div>
         <img src={`/img/img-product/${image}`} alt={name} />
       </div>
       <div className="card-body">
